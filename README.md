@@ -35,7 +35,6 @@ To run this application, you need to have Python 3.7 or higher installed on your
 
 Open the app.py file and replace the line:
 
-    ```bash
     openai.api_key = "your_openai_api_key"
 with your actual OpenAI API key.
 
