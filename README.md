@@ -17,8 +17,8 @@ A Streamlit application that serves as a gastroenterology chatbot, allowing user
 
 1. Clone the repository:
    ```bash
-   git clone <repository_url>
-   cd <repository_directory>
+   git clone https://github.com/DivanshiJain2005/gastroentrology-chatbot.git
+   cd gastroentrology-chatbot
    ```
 
 2. Create a virtual environment (optional but recommended):
