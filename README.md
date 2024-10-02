@@ -1,56 +1,58 @@
 # Gastroenterology Chatbot
 
-This is a Streamlit application that serves as a gastroenterology chatbot. It allows users to describe their symptoms and upload medical reports in PDF format, which are then parsed to provide relevant medical advice and potential diagnoses based on the user's input.
+A Streamlit application that serves as a gastroenterology chatbot, allowing users to describe symptoms and upload medical reports for analysis and potential diagnoses.
 
 ## Features
 
-- **Symptom Analysis**: Users can describe their symptoms, and the chatbot will analyze them to suggest possible gastroenterological diseases.
-- **Medical Report Upload**: Users can upload their medical reports in PDF format. The chatbot will parse the report and incorporate the information into its responses.
-- **Conversational Interface**: The chatbot maintains a conversational history for a more interactive experience.
+- **Symptom Analysis**: Analyze user-described symptoms to suggest possible gastroenterological diseases.
+- **Medical Report Upload**: Parse uploaded PDF medical reports to incorporate information into responses.
+- **Conversational Interface**: Maintain a conversational history for an interactive experience.
 
 ## Requirements
 
-To run this application, you need to have Python 3.7 or higher installed on your machine. You can create a virtual environment and install the necessary dependencies listed in `requirements.txt`.
+- Python 3.7 or higher
+- Dependencies listed in `requirements.txt`
 
 ## Installation
 
-1. Clone the repository or download the files.
-   
+1. Clone the repository:
    ```bash
    git clone <repository_url>
    cd <repository_directory>
+   ```
 
 2. Create a virtual environment (optional but recommended):
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   ```
 
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+3. Install required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-3. Install the required packages:
+4. Set your OpenAI API key:
+   Open `app.py` and replace the following line with your actual API key:
+   ```python
+   openai.api_key = "your_openai_api_key"
+   ```
 
-    ```bash
-    pip install -r requirements.txt
+## Running the Application
 
-4. Set your OpenAI API key in the code:
+Start the Streamlit application:
+```bash
+streamlit run app.py
+```
 
-Open the app.py file and replace the line:
-
-    openai.api_key = "your_openai_api_key"
-with your actual OpenAI API key.
-
-5. Running the Application
-To start the Streamlit application, run the following command:
-
-    ```bash
-    streamlit run app.py
-
-Open your web browser and go to http://localhost:8501 to interact with the chatbot.
+Access the chatbot at [http://localhost:8501](http://localhost:8501).
 
 ## Usage
 
-Describe Symptoms: Enter your symptoms in the chat input box.
-Upload Medical Reports: Use the file uploader to upload your medical report (PDF format).
-Receive Responses: The chatbot will analyze your input and provide potential diagnoses and recommendations based on the symptoms described and the content of the uploaded report.
+1. **Describe Symptoms**: Enter your symptoms in the chat input box.
+2. **Upload Medical Reports**: Use the file uploader to submit medical reports (PDF format).
+3. **Receive Responses**: Get potential diagnoses and recommendations based on your input and uploaded reports.
 
 ## Disclaimer
-This application is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.
+
+This application is not a substitute for professional medical advice, diagnosis, or treatment. Always consult with a qualified health provider regarding any medical conditions or concerns.
